@@ -6,7 +6,7 @@ NS Env Config
 [Github](https://github.com/tailhook/ns-env-config) |
 [Crate](https://crates.io/crates/ns-env-config)
 
-A env_logger-inspired one-stop configuration for name resolution based
+An env_logger-inspired one-stop configuration for name resolution based
 on abstract-ns.
 
 **Goals:**
@@ -14,17 +14,17 @@ on abstract-ns.
 1. Make bootstrapping of small to medium size apps easier
 2. Provide a standard way for configuring name resolution in rust ecosystem
 
-Features:
+**Features:**
 
 1. Standard libc-based name resolution by default (using threads)
-2. Feature-gated other resolvers (async, consul,...)
+2. [TODO] Feature-gated other resolvers (async, consul,...)
 3. If compiled in, resolvers are enabled by `RUST_NS=resolver_name`
-4. Sane defaults for resolver
+4. Sane defaults for resolvers
 5. Subscriptions are enabled by default (using polling if not available)
 6. Some options configured from env (`RUST_NS=resolver_name:option=value`)
 7. [TODO] Suffix-based resolution (`RUST_NS=std,consul=consul-resolver`)
 
-Non-goals:
+**Non-goals:**
 
 1. Covering every other way to resolve names
 2. Covering all the settings of every resolvers
@@ -40,12 +40,13 @@ Standard Resolver
 $ RUST_NS=std ./your-app
 ```
 
-Since standard library resolver is not asynchronous we run in a thread pool.
+Since standard library resolver is not asynchronous we run resolver
+in a thread pool.
 
 Parameters:
 
-`poll_ivl` -- polling interval for subscriptions in seconds, default `1`
-`threads` -- number of threads for name resolution, default `4`
+* `poll_ivl` -- polling interval for subscriptions in seconds, default `1`
+* `threads` -- number of threads for name resolution, default `4`
 
 Biggest declaration is something like this:
 

@@ -1,14 +1,14 @@
 [package]
 name = "ns-env-config"
 description = """
-    A env_logger-inspired one-stop configuration for name resolution based
+    An env_logger-inspired one-stop configuration for name resolution based
     on abstract-ns. Reduces boilerplate and provides standard way to configure
     DNS for applications via `RUST_NS` environment variable.
 """
 license = "MIT/Apache-2.0"
 readme = "README.md"
 keywords = ["abstract-ns", "ns", "dns"]
-categories = ["asynchronous"]
+categories = ["asynchronous", "network-programming"]
 homepage = "https://github.com/tailhook/ns-env-config"
 documentation = "https://docs.rs/ns-env-config"
 version = "0.1.0"
