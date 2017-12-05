@@ -7,7 +7,7 @@ NS Env Config
 [Crate](https://crates.io/crates/ns-env-config)
 
 An env_logger-inspired one-stop configuration for name resolution based
-on abstract-ns.
+on [`abstract-ns`](https://crates.io/crates/abstract-ns).
 
 **Goals:**
 
